@@ -12,15 +12,17 @@ class Login extends Component{
         this.acessar = this.acessar.bind(this);
     }
 
-    async acessar(){
+    async acessar() {
         await firebase.auth().signInWithEmailAndPassword(this.state.email, this.state.senha)
         .then(() => {
-             window.location.href = "./principal"
+            window.location.href = "./principal";
         })
-        .catch((erro) => {
-            this.setState( {erroMensagem : erro.mensagem} )
+        .catch(() => {
+            this.setState({ erroMensagem: 'Usuário não cadastrado!' });
         });
     }
+    
+    
 
     cadastrar() {
         window.location.href= "./cadastro"
