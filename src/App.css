@@ -4,50 +4,50 @@ body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
-  background-color: #f3e5f5; /* lilás claro */
-  color: #4a148c; /* roxo escuro */
+  background-color: #f3e5f5; 
+  color: #4a148c; 
 }
 
 h1, h2, h3 {
-  color: #6a1b9a; /* roxo médio */
+  color: #6a1b9a; 
 }
 
 button {
-  background-color: #8e24aa; /* roxo */
+  background-color: #8e24aa; 
   color: white;
   border: none;
   border-radius: 4px;
   padding: 10px 20px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  width: 150px; /* mesmo tamanho para todos os botões */
+  width: 150px; 
   text-align: center;
-  margin-right: 10px; /* espaçamento horizontal entre botões */
-  margin-bottom: 10px; /* espaçamento vertical entre botões, se empilharem */
+  margin-right: 10px; 
+  margin-bottom: 10px; 
 }
 
 .button-group {
   display: flex;
-  gap: 10px;         /* espaço entre os botões */
-  justify-content: center; /* centraliza horizontalmente */
+  gap: 10px;         
+  justify-content: center; 
   margin-top: 10px;
 }
 
 button:last-child {
-  margin-right: 0; /* remove margem extra no último botão da linha */
+  margin-right: 0; 
 }
 
 button:hover {
-  background-color: #6a1b9a; /* roxo mais escuro no hover */
+  background-color: #6a1b9a; 
 }
 
 div {
   max-width: 600px;
   margin: 20px auto;
-  padding: 0; /* sem padding no topo */
-  background-color: #ffffff; /* fundo branco para destacar */
-  border-radius: 8px; /* cantos arredondados */
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* sombra leve, sem borda */
+  padding: 0; 
+  background-color: #ffffff; 
+  border-radius: 8px; 
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); 
 }
 
 input {
