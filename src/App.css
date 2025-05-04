@@ -20,6 +20,21 @@ button {
   padding: 10px 20px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  width: 150px; /* mesmo tamanho para todos os botões */
+  text-align: center;
+  margin-right: 10px; /* espaçamento horizontal entre botões */
+  margin-bottom: 10px; /* espaçamento vertical entre botões, se empilharem */
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;         /* espaço entre os botões */
+  justify-content: center; /* centraliza horizontalmente */
+  margin-top: 10px;
+}
+
+button:last-child {
+  margin-right: 0; /* remove margem extra no último botão da linha */
 }
 
 button:hover {
@@ -28,5 +43,32 @@ button:hover {
 
 div {
   max-width: 600px;
-  margin: 0 auto;
+  margin: 20px auto;
+  padding: 0; /* sem padding no topo */
+  background-color: #ffffff; /* fundo branco para destacar */
+  border-radius: 8px; /* cantos arredondados */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* sombra leve, sem borda */
+}
+
+input {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.form-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }

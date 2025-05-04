@@ -6,7 +6,8 @@ class Login extends Component{
         super(props);
         this.state = {
             email: "",
-            senha: ""
+            senha: "",
+            erroMensagem: ""
         }
         this.acessar = this.acessar.bind(this);
     }
@@ -17,19 +18,34 @@ class Login extends Component{
              window.location.href = "./principal"
         })
         .catch((erro) => {
-
+            this.setState( {erroMensagem : erro.mensagem} )
         });
     }
 
+    cadastrar() {
+        window.location.href= "./cadastro"
+    }
+    
     render() {
         return (
-            <div>
+            <div className="form-container">
                 <h1>Login</h1>
                 <input type="text" placeholder='E-mail' onChange={(e) => this.setState({email: e.target.value})} />
                 <br/> 
-                <input type="text" placeholder='Senha' onChange={(e) => this.setState({senha: e.target.value})} />
+                <input type="password" placeholder='Senha' onChange={(e) => this.setState({senha: e.target.value})} />
                 <br/>
-                <button onClick={this.acessar}>Acessar</button> 
+                <div className="button-group">
+                    <button onClick={this.acessar}>Acessar</button> 
+
+                    
+                    <button onClick={this.cadastrar}>Cadastrar</button>
+                </div>
+                {this.state.erroMensagem && (
+                <div style={{ color: 'red', marginTop: '10px' }}>
+                    {this.state.erroMensagem}
+                </div>
+            )}
+
             </div>
         )
     }
